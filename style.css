@@ -1,0 +1,121 @@
+nav ul a, nav .brand-logo {
+    color: #444;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    line-height: 2rem;
+}
+
+.light {
+    font-weight: 300;
+}
+
+h5 {
+    display: block;
+    margin-block-start: 1.67em;
+    margin-block-end: 1.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+footer.page-footer {
+    padding: 5px;
+    flex-shrink: 0;
+    background-color: white;
+    margin-block-start: auto;
+}
+
+footer h5, footer p {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-image: url(crissXcross.png);
+    color: white;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+.parallax-container {
+    height: 300px;
+}
+
+/* div.row.content {
+    justify-content: center;
+} */
+
+div.container.main {
+    /* margin: 0px 100px 0px 100px; */
+    justify-content: center;
+}
+
+p#main-text {
+    margin: 0;
+}
+
+h2.main-header {
+    margin-top: 85px;
+    /* font-family: 'Bungee Shade', cursive;
+    font-family: 'Fascinate Inline', cursive;
+    font-family: 'Jacques Francois Shadow', cursive; */
+    font-family: 'Monoton', cursive;
+    font-size: 85px;
+    margin-bottom: 20px;
+    /* font-weight: bolder; */
+}
+
+div.movie-genre, div.ingredients {
+    width: 100%;
+    line-height: 50px;
+}
+
+div.button-div {
+    justify-content: center;
+    line-height: 200px;
+}
+
+[type="checkbox"]+span:not(.lever) {
+    padding-left: 23px;
+    padding-right: 7px;
+    display: flex;
+}
+
+.material-icons {
+    white-space: normal;
+}
+
+p.range-field {
+    margin-inline-start: 25%;
+    margin-inline-end: 25%;
+}
+
+#site-info {
+    margin-bottom: 50px;
+}
+
+h2.results-header {
+    margin-top: 85px;
+    /* font-family: 'Bungee Shade', cursive; */
+    /* font-family: 'Fascinate Inline', cursive; */
+    font-family: 'Jacques Francois Shadow', cursive;
+    /* font-family: 'Monoton', cursive; */
+    font-size: 95px;
+    margin-bottom: 20px;
+}
+
+div.result {
+    line-height: 50px;
+}
