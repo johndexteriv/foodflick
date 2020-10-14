@@ -1,27 +1,19 @@
-var movies = [
-   {
-      action: ["the other guys", "a knight's tale", "extraction", "ocean's eleven", "spenser confidential" ]
-   },
-   {
-      romantic: ["sleepless in seattle", "set it up", "when we first met", "the notebook", "the wedding planner"]
-   },
-   {
-      horror: ["hereditary", "halloween", "sleepy hollow", "hush", "the boy"]
-   },
-   {
-      scifi: ["star wars", "blade runner", "underworld", "bird box", "time trap"]
-   },
-   {
-      thriller: ["dangerous lies", "nightcrawler", "murder mystery", "uncut gems", "drive"]
-   },
-   {
-      family: ["spider-man: into the spider-verse", "enola holmes", "a series of unfortunate events", "back to the future", "bee movie"]
-   },
-   {
-      comedy: ["hubie halloween", "mr. deeds", "big daddy", "you don't mess with the zohan", "the do-over"]
-   }
-]
- 
+var action = ["the other guys", "a knight's tale", "extraction", "ocean's eleven", "spenser confidential"];
+
+var romantic = ["sleepless in seattle", "set it up", "when we first met", "the notebook", "the wedding planner"];
+
+var horror = ["hereditary", "halloween", "sleepy hollow", "hush", "the boy"];
+
+var scifi = ["underworld", "bird box", "time trap", "snowpiercer", "what happened to monday"];
+
+var thriller = ["dangerous lies", "nightcrawler", "murder mystery", "uncut gems", "drive"];
+
+var family = ["spider-man: into the spider-verse", "enola holmes", "a series of unfortunate events", "back to the future", "bee movie"];
+
+var comedy = ["hubie halloween", "mr. deeds", "big daddy", "you don't mess with the zohan", "the do-over"];
+
+var movies = [];
+
 function movieDetails() {
    var movie = $(".moviePick").text();
    var queryURL =
@@ -69,10 +61,16 @@ function movieDetails() {
      var imageDiv = $("<img>").attr("src", imgURL);
      movieDiv.append(imageDiv);
 
-      // log it
-     console.log("movieDiv", movieDiv);
-
    });
 }
 
 movieDetails()
+
+$('#submit').on("click", function(){
+	$(".genreCheck:checked").each(function(){
+      var genre = $(this).val()
+      console.log(genre);
+      movies = movies.concat(eval(genre))
+      console.log("movies", movies)
+	})
+})
