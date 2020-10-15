@@ -1,11 +1,134 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Food & Flick</title>
+    <!-- Reset Stylesheet -->
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="reset.css"
+      media="screen,projection"
+    />
+    <!--Import Google Icon/Fonts-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Fascinate+Inline&family=Jacques+Francois+Shadow&family=Monoton&display=swap"
+      rel="stylesheet"
+    />
+    <!--Import materialize.css-->
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+      media="screen,projection"
+    />
+    <!-- our stylesheet -->
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="style.css"
+      media="screen,projection"
+    />
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body>
+    <!-- nav bar -->
+    <nav class="grey darken-4" role="navigation">
+      <div class="nav-wrapper container">
+        <a id="logo-container" href="#" class="brand-logo">Logo</a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#">Home</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- main body content -->
+    <main>
+      <div class="container main">
+        <div class="row content">
+          <h2 class="main-header center-align red-text text-darken-3">
+            Food + Flick
+          </h2>
+          <p
+            class="flow-text center-align red-text text-darken-3"
+            id="site-info"
+          >
+            Food and Flick is a website that helps users find a movie and a
+            recipe according to their personal tastes. To use, select a movie
+            genre and what food type/ingredients you want in your meal.
+          </p>
+          <div class="col l4 indigo darken-4 center-align movie-genre">
+            Pick a Genre
+            <form action="#">
+              <p>
+                <label><input type="checkbox"  value="action" /><span>Action</span></label>
+                <label> <input type="checkbox"  value="romantic" /> <span>Romantic</span></label>
+                <label><input type="checkbox"  value="comedy"/> <span>Comedy</span></label>
+                <label><input type="checkbox"  value="sci-fi"/> <span>Sci-fi</span></label>
+                <label><input type="checkbox"  value="horror"/> <span>Horror</span></label>
+                <label><input type="checkbox"  value="thriller"/> <span>Thriller</span></label>
+                <label><input type="checkbox"  value="comedy"/> <span>Comedy</span></label>
+                <label><input type="checkbox"  value="drama"/> <span>Drama</span></label>
+              </p>
+            </form>
+            <form action="#">
+              <label for="fname">Number of results</label><br />
+              <p class="range-field">
+                <input type="range" id="test5" min="0" max="10" />
+              </p>
+            </form>
+          </div>
+          <div class="col l4">
+            <div class="col l12 center-align button-div">
+              <button
+                class="btn waves-effect waves-light"
+                type="submit"
+                name="action"
+                id="submit"
+              >
+                Submit
+              </button>
+            </div>
+          </div>
+          <div class="col l4 indigo darken-4 mx-2 center-align ingredients">
+            <form id="foodform" action="#">
+              <legend>Select a Cuisine</legend>
+              <div id="foodform">
+                <label><input type="checkbox" name="cuisine" class="foodcheck" value="african" /><span>African</span></label>
+                <label><input type="checkbox" name="cuisine" class="foodcheck" value="american" /><span>American</span></label>
+                <label><input type="checkbox" name="cuisine" class="foodcheck" value="asian"/><span>Asian</span></label>
+                <label><input type="checkbox" name="cuisine" class="foodcheck" value="french"/><span>French</span></label>
+                <label><input type="checkbox" name="cuisine" class="foodcheck" value="german"/><span>German</span></label>
+                <label><input type="checkbox" name="cuisine" class="foodcheck" value="irish"/><span>Irish</span></label>
+                <label><input type="checkbox" name="cuisine" class="foodcheck" value="italian"/><span>Italian</span></label>
+                <label><input type="checkbox" name="cuisine" class="foodcheck" value="mediterranean"/><span>Mediterranean</span></label>
+                <label><input type="checkbox" name="cuisine" class="foodcheck" value="mexican"/><span>Mexican</span></label>
+              </div>
+            </form>
+            <!-- <p>
+              <a class="btn-floating btn-small waves-effect waves-light red"
+                ><i class="material-icons">add another</i></a>
+            </p> -->
+            <!-- add button? -->
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- footer -->
+    <footer class="page-footer grey darken-4">
+      <h5 class="black-text">Optional Footer</h5>
+      <p class="black-text">footer text content</p>
+    </footer>
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
