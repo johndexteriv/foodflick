@@ -2,9 +2,6 @@ $('input[type="checkbox"]').on('change', function() {
     $('input[name="' + this.name + '"]').not(this).prop('checked', false);
 });
 
-// function clearDivs(){
-// 	$('.ingredients').text("");
-// }
 
 $('#submit').on("click", function(){
 	
@@ -15,10 +12,6 @@ $('#submit').on("click", function(){
 		
 		var foodType = $(this).val()
 		console.log('this is the food type', foodType);
-		// (foodsSelected).push($(this).val())
-		// clearDivs();
-		// console.log(foodsSelected);
-		// window.location.href='results.html';
 		food(foodType);
 
 	})
