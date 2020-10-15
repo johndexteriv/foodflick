@@ -50,8 +50,6 @@ var comedy = [
 
 var movies = [];
 
-var moviePick = [];
-
 // submit button
 $("#submit").on("click", function () {
   $(".genreCheck:checked").each(function () {
@@ -64,13 +62,13 @@ $("#submit").on("click", function () {
 
   // randomly picks one out of the movies array
   var random = Math.floor(Math.random() * movies.length);
-  window.moviePick = movies[random];
+  var moviePick = movies[random];
   console.log("moviePick", moviePick);
-  movieDetails();
+  movieDetails(moviePick);
 });
 
 // pulls data for the movie then dynamically adds it to html
-function movieDetails() {
+function movieDetails(moviePick) {
   console.log("moviePick", moviePick); //remove later
   var queryURL = "https://www.omdbapi.com/?t=" + moviePick + "&apikey=trilogy";
   console.log("queryURL:", queryURL); //remove later
