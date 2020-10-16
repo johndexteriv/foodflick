@@ -50,23 +50,28 @@
       </div>
     </nav>
     <!-- main body content -->
-    <main>
+    <main class="red-text text-darken-3">
+      <div class="parallax-container">
+      <div class="parallax"><img src="petals.jpg"></div>
+      </div>
       <div class="container main">
+      
         <div class="row content">
-          <h2 class="main-header center-align red-text text-darken-3">
+          <h3 class="main-header center-align ">
             Food + Flick
-          </h2>
+          </h3>
           <p
-            class="flow-text center-align red-text text-darken-3"
+            class="flow-text center-align"
             id="site-info"
           >
             Food and Flick is a website that helps users find a movie and a
             recipe according to their personal tastes. To use, select a movie
             genre and what food type/ingredients you want in your meal.
           </p>
-          <div class="col l4 indigo darken-4 center-align movie-genre">
-            <form id="movieform" action="#">
-              Pick a Genre
+          <!-- movie genre column -->
+          <div class="col l5 center-align movie-genre">
+            Pick a Genre
+            <form action="#" id="movieform">
               <p>
                 <label><input type="checkbox" class="genreCheck"  value="action" /><span>Action</span></label>
                 <label> <input type="checkbox" class="genreCheck" value="romantic" /> <span>Romantic</span></label>
@@ -74,21 +79,15 @@
                 <label><input type="checkbox" class="genreCheck" value="scifi"/> <span>Sci-fi</span></label>
                 <label><input type="checkbox" class="genreCheck" value="horror"/> <span>Horror</span></label>
                 <label><input type="checkbox" class="genreCheck" value="thriller"/> <span>Thriller</span></label>
-                <label><input type="checkbox" class="genreCheck" value="comedy"/> <span>Comedy</span></label>
-                <label><input type="checkbox" class="genreCheck" value="drama"/> <span>Drama</span></label>
+                <!-- <label><input type="checkbox" class="genreCheck" value="drama"/> <span>Drama</span></label> -->
               </p>
             </form>
-            <!-- <form action="#">
-              <label for="fname">Number of results</label><br />
-              <p class="range-field">
-                <input type="range" id="test5" min="0" max="10" />
-              </p>
-            </form> -->
           </div>
-          <div class="col l4">
+          <!-- submit button column -->
+          <div class="col l2">
             <div class="col l12 center-align button-div">
               <button
-                class="btn waves-effect waves-light"
+                class="btn waves-effect waves-light red darken-4"
                 type="submit"
                 name="action"
                 id="submit"
@@ -97,10 +96,12 @@
               </button>
             </div>
           </div>
-          <div class="col l4 indigo darken-4 mx-2 center-align ingredients">
+          <!-- ingredients column -->
+          <div class="col l5 mx-2 center-align ingredients">
+            Select a Cuisine
             <form id="foodform" action="#">
-              Select a Cuisine
               <div id="foodform">
+                <p>
                 <label><input type="checkbox" name="cuisine" class="foodcheck" value="african" /><span>African</span></label>
                 <label><input type="checkbox" name="cuisine" class="foodcheck" value="american" /><span>American</span></label>
                 <label><input type="checkbox" name="cuisine" class="foodcheck" value="asian"/><span>Asian</span></label>
@@ -110,16 +111,15 @@
                 <label><input type="checkbox" name="cuisine" class="foodcheck" value="italian"/><span>Italian</span></label>
                 <label><input type="checkbox" name="cuisine" class="foodcheck" value="mediterranean"/><span>Mediterranean</span></label>
                 <label><input type="checkbox" name="cuisine" class="foodcheck" value="mexican"/><span>Mexican</span></label>
+              </p>
               </div>
             </form>
-            <!-- <p>
-              <a class="btn-floating btn-small waves-effect waves-light red"
-                ><i class="material-icons">add another</i></a>
-            </p> -->
-            <!-- add button? -->
           </div>
         </div>
       </div>
+      <div class="parallax-container">
+      <div class="parallax"><img src="petals.jpg"></div>
+    </div>
     </main>
     <!-- footer -->
     <footer class="page-footer grey darken-4">
