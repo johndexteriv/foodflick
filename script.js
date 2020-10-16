@@ -55,30 +55,24 @@ $("#submit").on("click", function () {
   $(".genreCheck:checked").each(function () {
     // check for genre choice then adds those movies into movies array
     var genre = $(this).val();
-    console.log("genre", genre); //remove later
     movies = movies.concat(eval(genre));
-    console.log("movies", movies); //remove later
   });
 
   // randomly picks one out of the movies array
   var random = Math.floor(Math.random() * movies.length);
   var moviePick = movies[random];
-  console.log("moviePick", moviePick);
   movieDetails(moviePick);
 });
 
 // pulls data for the movie then dynamically adds it to html
 function movieDetails(moviePick) {
-  console.log("moviePick", moviePick); //remove later
   var queryURL = "https://www.omdbapi.com/?t=" + moviePick + "&apikey=trilogy";
-  console.log("queryURL:", queryURL); //remove later
 
   // AJAX call
   $.ajax({
     url: queryURL,
     method: "GET",
   }).then(function (response) {
-    console.log("response", response); //remove later
 
     // div to hold movie info
     var movieDiv = $(".movieDiv");
