@@ -55,7 +55,7 @@ var action = [
   var movies = [];
 
 $('#submit').on("click", function(){
-	
+	$(".button-div").empty();
 	$(".genreCheck:checked").each(function () {
 		// check for genre choice then adds those movies into movies array
 		var genre = $(this).val();
@@ -148,3 +148,8 @@ function food(foodType) {
 	})
 
 };
+
+// parallax JS
+$(document).ready(function () {
+    $(".parallax").parallax();
+  });
