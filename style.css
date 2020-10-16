@@ -42,7 +42,7 @@ body {
     flex-direction: column;
   }
 
-  main {
+  .section {
     flex: 1 0 auto;
   }
 
@@ -54,6 +54,7 @@ div.container.main {
     /* margin: 0px 100px 0px 100px; */
     justify-content: center
 }
+
 
 p#main-text {
     margin: 0;
@@ -98,5 +99,9 @@ p.range-field {
     padding-left: 23px;
     padding-right: 10px;
     line-height: 22px;
+}
 
+a.fas.fa-film {
+    font-size: 40px;
+    line-height: 1.5;
 }

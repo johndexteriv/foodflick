@@ -56,6 +56,13 @@ var action = [
 
 $('#submit').on("click", function(){
 	$(".button-div").empty();
+	$(".button-div").empty();
+  	var refreshButton = $(
+      '<button class="btn waves-effect waves-light red darken-4" id="refresh" >' +
+        "Back" +
+        "</button>"
+    );
+  $(".button-div").append(refreshButton);
 	$(".genreCheck:checked").each(function () {
 		// check for genre choice then adds those movies into movies array
 		var genre = $(this).val();
@@ -117,6 +124,11 @@ $('#submit').on("click", function(){
 	  movieDiv.append(runtimeDiv);
 	  
 	});
+	  
+ 
+$("#refresh").on("click", function () {
+  window.location.reload();
+});	  
 }
 
 function food(foodType) {
@@ -147,9 +159,21 @@ function food(foodType) {
 
 	})
 
+$("#refresh").on("click", function () {
+  window.location.reload();
+});
+
 };
 
 // parallax JS
 $(document).ready(function () {
     $(".parallax").parallax();
-  });
+});
+  
+
+
+// refresh buttons
+$('#home').on("click", function () {
+	window.location.reload();
+});
+
