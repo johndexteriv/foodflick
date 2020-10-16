@@ -148,3 +148,8 @@ function food(foodType) {
 	})
 
 };
+
+// parallax JS
+$(document).ready(function () {
+    $(".parallax").parallax();
+  });
