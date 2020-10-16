@@ -11,7 +11,6 @@ $('#submit').on("click", function(){
 	$(".foodcheck:checked").each(function(){
 		
 		var foodType = $(this).val()
-		console.log('this is the food type', foodType);
 		food(foodType);
 
 	})
