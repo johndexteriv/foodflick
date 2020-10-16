@@ -65,25 +65,25 @@
             genre and what food type/ingredients you want in your meal.
           </p>
           <div class="col l4 indigo darken-4 center-align movie-genre">
-            Pick a Genre
-            <form action="#">
+            <form id="movieform" action="#">
+              Pick a Genre
               <p>
-                <label><input type="checkbox"  value="action" /><span>Action</span></label>
-                <label> <input type="checkbox"  value="romantic" /> <span>Romantic</span></label>
-                <label><input type="checkbox"  value="comedy"/> <span>Comedy</span></label>
-                <label><input type="checkbox"  value="sci-fi"/> <span>Sci-fi</span></label>
-                <label><input type="checkbox"  value="horror"/> <span>Horror</span></label>
-                <label><input type="checkbox"  value="thriller"/> <span>Thriller</span></label>
-                <label><input type="checkbox"  value="comedy"/> <span>Comedy</span></label>
-                <label><input type="checkbox"  value="drama"/> <span>Drama</span></label>
+                <label><input type="checkbox" class="genreCheck"  value="action" /><span>Action</span></label>
+                <label> <input type="checkbox" class="genreCheck" value="romantic" /> <span>Romantic</span></label>
+                <label><input type="checkbox" class="genreCheck" value="comedy"/> <span>Comedy</span></label>
+                <label><input type="checkbox" class="genreCheck" value="scifi"/> <span>Sci-fi</span></label>
+                <label><input type="checkbox" class="genreCheck" value="horror"/> <span>Horror</span></label>
+                <label><input type="checkbox" class="genreCheck" value="thriller"/> <span>Thriller</span></label>
+                <label><input type="checkbox" class="genreCheck" value="comedy"/> <span>Comedy</span></label>
+                <label><input type="checkbox" class="genreCheck" value="drama"/> <span>Drama</span></label>
               </p>
             </form>
-            <form action="#">
+            <!-- <form action="#">
               <label for="fname">Number of results</label><br />
               <p class="range-field">
                 <input type="range" id="test5" min="0" max="10" />
               </p>
-            </form>
+            </form> -->
           </div>
           <div class="col l4">
             <div class="col l12 center-align button-div">
@@ -99,7 +99,7 @@
           </div>
           <div class="col l4 indigo darken-4 mx-2 center-align ingredients">
             <form id="foodform" action="#">
-              <legend>Select a Cuisine</legend>
+              Select a Cuisine
               <div id="foodform">
                 <label><input type="checkbox" name="cuisine" class="foodcheck" value="african" /><span>African</span></label>
                 <label><input type="checkbox" name="cuisine" class="foodcheck" value="american" /><span>American</span></label>
