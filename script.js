@@ -54,7 +54,11 @@ var action = [
 
   var movies = [];
 
-$('#submit').on("click", function(){
+  
+
+
+  
+$('#submit').on("click", function runScript(){
 
 	$('.button-div').empty()
 	var refreshButton = $('<button class="btn waves-effect waves-light red darken-4 refresh" >' + 'Try Again' + '</button>')
@@ -64,7 +68,7 @@ $('#submit').on("click", function(){
 		location.reload();
     })
 	
-	$(".genreCheck:checked").each(function () {
+	$(".genreCheck:checked").each(function runMovies() {
 		// check for genre choice then adds those movies into movies array
 		var genre = $(this).val();
 		movies = movies.concat(eval(genre));
@@ -81,9 +85,13 @@ $('#submit').on("click", function(){
 		
 		var foodType = $(this).val()
 		food(foodType);
-
+		// Refresh Button to be used in future development
+		// $(document).on("click", ".refresh", function(event){
+		// 	if(event.target.matches('.refresh')){
+		// 	food(foodType);
+		// 	}
+		// })
 	})
-
 })
 
   // pulls data for the movie then dynamically adds it to html
@@ -96,6 +104,7 @@ $('#submit').on("click", function(){
 	  url: queryURL,
 	  method: "GET",
 	}).then(function (response) {
+		console.log('this is the movie response', response);
 	  // div to hold movie info
 	  $('#movieform').empty();
 	  var movieDiv = $(".movie-genre");
