@@ -55,14 +55,15 @@ var action = [
   var movies = [];
 
 $('#submit').on("click", function(){
-	$(".button-div").empty();
-	$(".button-div").empty();
-  	var refreshButton = $(
-      '<button class="btn waves-effect waves-light red darken-4" id="refresh" >' +
-        "Back" +
-        "</button>"
-    );
-  $(".button-div").append(refreshButton);
+
+	$('.button-div').empty()
+	var refreshButton = $('<button class="btn waves-effect waves-light red darken-4 refresh" >' + 'Try Again' + '</button>')
+	$('.button-div').append(refreshButton);
+
+	$(document).on("click", ".refresh", function(event){
+		location.reload();
+    })
+	
 	$(".genreCheck:checked").each(function () {
 		// check for genre choice then adds those movies into movies array
 		var genre = $(this).val();
