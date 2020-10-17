@@ -134,6 +134,11 @@ $('#submit').on("click", function runScript(){
 	  movieDiv.append(runtimeDiv);
 	  
 	});
+	  
+ 
+$("#refresh").on("click", function () {
+  window.location.reload();
+});	  
 }
 
 function food(foodType) {
@@ -164,9 +169,21 @@ function food(foodType) {
 
 	})
 
+$("#refresh").on("click", function () {
+  window.location.reload();
+});
+
 };
 
 // parallax JS
 $(document).ready(function () {
     $(".parallax").parallax();
-  });
+});
+  
+
+
+// refresh buttons
+$('#home').on("click", function () {
+	window.location.reload();
+});
+
