@@ -57,7 +57,7 @@ var action = [
 $('#submit').on("click", function(){
 
 	$('.button-div').empty()
-	var refreshButton = $('<button class="btn waves-effect waves-light refresh" >' + 'Try Again' + '</button>')
+	var refreshButton = $('<button class="btn waves-effect waves-light red darken-4 refresh" >' + 'Try Again' + '</button>')
 	$('.button-div').append(refreshButton);
 
 	$(document).on("click", ".refresh", function(event){
