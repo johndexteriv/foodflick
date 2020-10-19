@@ -54,11 +54,16 @@
       <div class="parallax-container">
       <div class="parallax"><img src="https://northernvirginiamag.com/wp-content/uploads/2020/08/movie-popcorn.jpg"></div>
       </div>
-      <div class="col l2 section white" style="margin-left: 10px;">
-         <strong>Previous searches</strong> 
-        <ul class="searchhistorylist"></ul>
-        <button id="clearsearch" class="btn-small" style="background-color: darkgray; margin-top: 5px; font-size: 10.3px;">Clear Recent Searches</button>
+      <div class="col l2 section white" style="margin-left: 10px; float: left;">
+         <strong>Previous Movie Searches</strong> 
+        <ul class="searchmovielist"></ul>
+        <button id="clearmoviesearch" class="btn-small" style="background-color: darkgray; margin-top: 5px; font-size: 10.3px;">Clear Recent Searches</button>
       </div>  
+      <div class="col l2 section white" style="margin-right: 10px; float: right;">
+        <strong>Previous Recipe Searches</strong> 
+       <ul class="searchrecipelist"></ul>
+       <button id="clearfoodsearch" class="btn-small" style="background-color: darkgray; margin-top: 5px; font-size: 10.3px;">Clear Recent Searches</button>
+     </div>  
       <div class="container main center-align">
         <div class="row content">
           <h3 class="main-header center-align ">
@@ -76,7 +81,7 @@
           <div class="col l4 center-align movie-genre">
             <h6 class="sectionheading"><strong>Pick a Genre</strong></h6>
             <form action="#" id="movieform">
-              <p class="foodchecks">
+              <p class="moviechecks">
                 <label><input type="checkbox" class="genreCheck" value="action"/><span>Action</span></label>
                 <label><input type="checkbox" class="genreCheck" value="romantic"/><span>Romantic</span></label>
                 <label><input type="checkbox" class="genreCheck" value="comedy"/><span>Comedy</span></label>
@@ -106,7 +111,7 @@
             <h6 class="sectionheading"><strong>Select a Cuisine</h6></strong>
             <form id="foodform" action="#">
               <div id="foodform">
-                <p>
+                <p id="foodchecks">
                 <label><input type="checkbox" name="cuisine" class="foodcheck" value="american" /><span>American</span></label>
                 <label><input type="checkbox" name="cuisine" class="foodcheck" value="asian"/><span>Asian</span></label>
                 <label><input type="checkbox" name="cuisine" class="foodcheck" value="french"/><span>French</span></label>

@@ -206,13 +206,18 @@ $(document).on("click", ".list-group-item", function(event){
 	}
 })
 // On click function to clear recent searches
-$(document).on("click", "#clearsearch", function(event){
-	if (event.target.matches("#clearsearch")){
-		$('.searchhistorylist').html("")
-		savedFoodsParse.length = 0;
-		localStorage.setItem('savedFoodsList', JSON.stringify(savedFoodsParse))
+$(document).on("click", "#clearmoviesearch", function(event){
+	if (event.target.matches("#clearmoviesearch")){
+		$('.searchmovielist').html("")
 		savedMoviesParse.length = 0;
 		localStorage.setItem('savedMoviesList', JSON.stringify(savedMoviesParse))
+	}
+})
+$(document).on("click", "#clearfoodsearch", function(event){
+	if (event.target.matches("#clearfoodsearch")){
+		$('.searchrecipelist').html("")
+		savedFoodsParse.length = 0;
+		localStorage.setItem('savedFoodsList', JSON.stringify(savedFoodsParse))
 	}
 })
 // Function to run recently searched recipe
@@ -280,16 +285,10 @@ function movieListClick (movieToRun){
 	  var runtime = response.Runtime;
 	  var runtimeDiv = $("<p>").text("Runtime: " + runtime);
 	  movieDiv.append(runtimeDiv);
-
-	  var savedMoviesList = localStorage.getItem("savedMoviesList")
-	  savedMoviesList = JSON.parse(savedMoviesList);
-	  savedMoviesList.push(moviePick);
-	  localStorage.setItem("savedMoviesList", JSON.stringify(savedMoviesList));
-	  
 	});
 }
 // Function to loop through saved movies and foods and append to page
-function renderList(){
+function renderMovieList(){
 	
 	var searchCounter = 1;
 	for (i = 0; i < savedMoviesParse.length; i++){
@@ -297,13 +296,29 @@ function renderList(){
 		var singleSearchLi = $('<li>' + '<button class="btn-small waves-effect waves-light red darken-4" style="margin-top: 5px">' + 'Previous Search ' + searchCounter++ + '</button>' + '</li>')
 		singleSearchLi.children().addClass('list-group-item')
 		singleSearchLi.children().attr("movie", savedMoviesParse[i])
-		singleSearchLi.children().attr("food", savedFoodsParse[i])
 		console.log(singleSearchLi);
-		$('.searchhistorylist').append(singleSearchLi);
+		$('.searchmovielist').append(singleSearchLi);
 		// Feature that only allows the top three recent searches to be stored
 		if (savedMoviesParse.length > 3){
 			savedMoviesParse.splice(0, 1)
 			localStorage.setItem('savedMoviesList', JSON.stringify(savedMoviesParse))
+		}
+
+	}
+}
+
+function renderRecipeList(){
+	
+	var searchCounter = 1;
+	for (i = 0; i < savedFoodsParse.length; i++){
+
+		var singleSearchLi = $('<li>' + '<button class="btn-small waves-effect waves-light red darken-4" style="margin-top: 5px">' + 'Previous Search ' + searchCounter++ + '</button>' + '</li>')
+		singleSearchLi.children().addClass('list-group-item')
+		singleSearchLi.children().attr("food", savedFoodsParse[i])
+		console.log(singleSearchLi);
+		$('.searchrecipelist').append(singleSearchLi);
+		// Feature that only allows the top three recent searches to be stored
+		if (savedFoodsParse.length > 3){
 			savedFoodsParse.splice(0, 1)
 			localStorage.setItem('savedFoodsList', JSON.stringify(savedFoodsParse))
 		}
@@ -320,4 +335,5 @@ $('#home').on("click", function () {
 	window.location.reload();
 });
 // RenderList upon opening of page
-renderList();
+renderMovieList();
+renderRecipeList();
