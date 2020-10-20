@@ -70,6 +70,12 @@ var savedFoods = [];
 
 // Submit on click function
 $('#submit').on("click", function runScript(){
+	// Keeps the user from hitting submit without selecting a either genre or cuisine
+	if(!$('.genreCheck').is(':checked') && !$('.foodcheck').is(':checked')){
+		alert('Please select a movie genre or cuisine type')
+		return;
+	} else {
+
 	// Changes the submit button to a try again button
 	$('.button-div').empty()
 	var refreshButton = $('<button class="btn waves-effect waves-light red darken-4 refresh" >' + 'Try Again' + '</button>')
@@ -80,9 +86,13 @@ $('#submit').on("click", function runScript(){
     })
 	// Removes the section headings
 	$(".sectionheading").remove();
-
+	
+	
 	// genreCheck Function
 	$(".genreCheck:checked").each(function runMovies() {
+		if (!$('input[class=".genreCheck"]:checked').length > 0 ){
+			console.log('cant be null')
+		}
 		// Check for genre choice then adds those movies into movies array
 		var genre = $(this).val();
 		movies = movies.concat(eval(genre));
@@ -99,8 +109,11 @@ $('#submit').on("click", function runScript(){
 		food(foodType);
 	})
 	// Empty searchhistorylist and render new list
-	$('.searchhistorylist').empty();
-	renderList();
+	$('.searchmovielist').empty();
+	$('.searchrecipelist').empty();
+	renderMovieList();
+	renderRecipeList();
+}
 })
 
   // pulls data for the movie then dynamically adds it to html
@@ -114,6 +127,9 @@ $('#submit').on("click", function runScript(){
 	  method: "GET",
 	}).then(function (response) {
 		console.log('this is the movie response', response);
+		if (response.Title === "Undefined"){
+			return;
+		} else {
 	  // div to hold movie info
 	  $('#movieform').empty();
 	  var movieDiv = $(".movie-genre");
@@ -146,6 +162,7 @@ $('#submit').on("click", function runScript(){
 	  savedMoviesList = JSON.parse(savedMoviesList);
 	  savedMoviesList.push(moviePick);
 	  localStorage.setItem("savedMoviesList", JSON.stringify(savedMoviesList));
+		}
 	  
 	});
 	  
@@ -153,6 +170,8 @@ $('#submit').on("click", function runScript(){
 $("#refresh").on("click", function () {
   window.location.reload();
 });	  
+
+
 }
 // pulls data for a random recipe based on cuisine type selected
 function food(foodType) {
