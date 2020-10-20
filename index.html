@@ -43,19 +43,19 @@
     <!-- nav bar -->
     <nav class="grey darken-4" role="navigation">
       <div class="nav-wrapper container">
-        <a id="logo-container" href="#" class="brand-logo">Logo</a>
+        <a id="logo-container" class="fas fa-film red-text text-darken-3"></a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="#">Home</a></li>
+          <li id="home"><a href="#" class="red-text text-darken-3">Home</a></li>
         </ul>
       </div>
     </nav>
     <!-- main body content -->
     <main class="red-text text-darken-3">
       <div class="parallax-container">
-      <div class="parallax"><img src="petals.jpg"></div>
+      <div class="parallax"><img src="https://northernvirginiamag.com/wp-content/uploads/2020/08/movie-popcorn.jpg"></div>
       </div>
+      <div class="section white">
       <div class="container main">
-      
         <div class="row content">
           <h3 class="main-header center-align ">
             Food + Flick
@@ -64,13 +64,13 @@
             class="flow-text center-align"
             id="site-info"
           >
-            Food and Flick is a website that helps users find a movie and a
-            recipe according to their personal tastes. To use, select a movie
-            genre and what food type/ingredients you want in your meal.
+            Food & Flick helps users find a movie and a
+            recipe according to their personal tastes. To get started, select a movie
+            genre and what type of cuisine you want for your meal.
           </p>
           <!-- movie genre column -->
           <div class="col l5 center-align movie-genre">
-            Pick a Genre
+            <h6><strong>Pick a Genre</strong></h6>
             <form action="#" id="movieform">
               <p>
                 <label><input type="checkbox" class="genreCheck"  value="action" /><span>Action</span></label>
@@ -79,30 +79,30 @@
                 <label><input type="checkbox" class="genreCheck" value="scifi"/> <span>Sci-fi</span></label>
                 <label><input type="checkbox" class="genreCheck" value="horror"/> <span>Horror</span></label>
                 <label><input type="checkbox" class="genreCheck" value="thriller"/> <span>Thriller</span></label>
-                <!-- <label><input type="checkbox" class="genreCheck" value="drama"/> <span>Drama</span></label> -->
               </p>
             </form>
           </div>
           <!-- submit button column -->
           <div class="col l2">
             <div class="col l12 center-align button-div">
+              
               <button
                 class="btn waves-effect waves-light red darken-4"
                 type="submit"
                 name="action"
                 id="submit"
-              >
+                >
                 Submit
               </button>
+            
             </div>
           </div>
           <!-- ingredients column -->
           <div class="col l5 mx-2 center-align ingredients">
-            Select a Cuisine
+            <h6><strong>Select a Cuisine</h6></strong>
             <form id="foodform" action="#">
               <div id="foodform">
                 <p>
-                <label><input type="checkbox" name="cuisine" class="foodcheck" value="african" /><span>African</span></label>
                 <label><input type="checkbox" name="cuisine" class="foodcheck" value="american" /><span>American</span></label>
                 <label><input type="checkbox" name="cuisine" class="foodcheck" value="asian"/><span>Asian</span></label>
                 <label><input type="checkbox" name="cuisine" class="foodcheck" value="french"/><span>French</span></label>
@@ -117,18 +117,15 @@
           </div>
         </div>
       </div>
+    </div>
       <div class="parallax-container">
-      <div class="parallax"><img src="petals.jpg"></div>
+      <div class="parallax"><img src="https://northernvirginiamag.com/wp-content/uploads/2020/08/movie-popcorn.jpg"></div>
     </div>
     </main>
-    <!-- footer -->
-    <footer class="page-footer grey darken-4">
-      <h5 class="black-text"></h5>
-      <p class="black-text"></p>
-    </footer>
     <!--  Scripts-->
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://kit.fontawesome.com/34f117fa7f.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
   </body>
 </html>

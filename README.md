@@ -6,7 +6,7 @@ A user logs on to the Dinner & a movie application in an evening bind - what to 
 
 Unsure what to make for dinner and how to use ingredients already found in their refrigerator, they're in luck.
 
-## Description
+## Descriptions
 
 Dinner & A Movie queries a receipe database using keywords (ingredients) provided by the user.
 In response, the database returns recipes using as many ingredients in the users possession.
