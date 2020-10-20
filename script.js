@@ -68,14 +68,7 @@ var movies = [];
 var savedMovies = [];
 var savedFoods = [];
 
-// Submit on click function
-$('#submit').on("click", function runScript(){
-	// Keeps the user from hitting submit without selecting a either genre or cuisine
-	if(!$('.genreCheck').is(':checked') && !$('.foodcheck').is(':checked')){
-		alert('Please select a movie genre or cuisine type')
-		return;
-	} else {
-
+function clear(){
 	// Changes the submit button to a try again button
 	$('.button-div').empty()
 	var refreshButton = $('<button class="btn waves-effect waves-light red darken-4 refresh" >' + 'Try Again' + '</button>')
@@ -86,7 +79,17 @@ $('#submit').on("click", function runScript(){
     })
 	// Removes the section headings
 	$(".sectionheading").remove();
-	
+}
+
+// Submit on click function
+$('#submit').on("click", function runScript(){
+	// Keeps the user from hitting submit without selecting a either genre or cuisine
+	if(!$('.genreCheck').is(':checked') && !$('.foodcheck').is(':checked')){
+		alert('Please select a movie genre or cuisine type')
+		return;
+	} else {
+
+	clear();
 	
 	// genreCheck Function
 	$(".genreCheck:checked").each(function runMovies() {
@@ -216,6 +219,7 @@ $("#refresh").on("click", function () {
 // On click function to run recently searched movies and recipes
 $(document).on("click", ".list-group-item", function(event){
 	if (event.target.matches('.list-group-item')){
+		clear();
 		var movieToRun = $(this).attr("movie")
 		var foodToRun = $(this).attr("food")
 		movieListClick(movieToRun);
@@ -277,6 +281,9 @@ function movieListClick (movieToRun){
 	  method: "GET",
 	}).then(function (response) {
 		console.log('this is the movie response', response);
+		if (response.Title === "Undefined"){
+			return;
+		} else {
 	  // div to hold movie info
 	  $('#movieform').empty();
 	  var movieDiv = $(".movie-genre");
@@ -304,7 +311,9 @@ function movieListClick (movieToRun){
 	  var runtime = response.Runtime;
 	  var runtimeDiv = $("<p>").text("Runtime: " + runtime);
 	  movieDiv.append(runtimeDiv);
+		}
 	});
+
 }
 // Function to loop through saved movies and foods and append to page
 function renderMovieList(){
