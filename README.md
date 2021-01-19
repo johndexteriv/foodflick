@@ -10,9 +10,10 @@ Unsure what to make for dinner and how to use ingredients already found in their
 
 Dinner & A Movie queries a receipe database using keywords (ingredients) provided by the user.
 In response, the database returns recipes using as many ingredients in the users possession.
-Additionally, the user can query a random movie to compliment their dinner based off selecting a genre. 
+Additionally, the user can query a random movie to compliment their dinner based off selecting a genre.
+
 
 ## Links
 https://balsamiq.cloud/stell5p/panhibn 
-https://johndexteriv.github.io/GroupProjectOne/
+https://johndexteriv.github.io/foodflick/
 ![Group Project One](FoodFlickScreenShot.png)
